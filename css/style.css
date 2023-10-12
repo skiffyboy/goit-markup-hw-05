@@ -607,6 +607,7 @@ header {
 
 .modal-div {
   position: relative;
+  margin-bottom: 8px;
 }
 .modal-div:focus-within .modal-icon {
   fill: #4d5ae5;

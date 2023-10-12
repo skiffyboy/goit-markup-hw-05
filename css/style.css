@@ -459,7 +459,6 @@ header {
   background-color: #2e2f42;
   border-radius: 4px;
   border: 1px solid #fff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   padding-left: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -468,6 +467,7 @@ header {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 .input-label ::placeholder {
   color: #ffffff;
@@ -576,7 +576,7 @@ header {
   fill: #ffffff;
 }
 
-.backdrop-paragraph-1 {
+.backdrop-paragraph {
   color: #2e2f42;
   text-align: center;
   font-size: 16px;
@@ -604,22 +604,26 @@ header {
   line-height: 1.16;
   letter-spacing: 0.02em;
 }
-.modal-input:focus,
-.modal-input:hover {
-  border-color: #4d5ae5;
-}
+
 .modal-div {
   position: relative;
 }
+.modal-div:focus-within .modal-icon {
+  fill: #4d5ae5;
+}
+.modal-div:focus-within .modal-input {
+  border-color: #4d5ae5;
+}
+
 .modal-label {
   display: block;
   width: 41px;
   color: #8e8f99;
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.16; /* 116.667% */
   letter-spacing: 0.48px;
   margin-bottom: 4px;
+  line-height: 1.17;
 }
 
 .modal-icon {
@@ -631,12 +635,6 @@ header {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-icon:focus {
-  fill: #4d5ae5;
-}
-.modal-icon:hover {
-  fill: #4d5ae5;
-}
 .modal-textarea {
   width: 360px;
   height: 120px;
@@ -738,4 +736,7 @@ header {
 }
 .textarea-div {
   margin-bottom: 16px;
+}
+.modal-icon-exit {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
